@@ -47,6 +47,8 @@ Before=emulationstation.service
 [Service]
 Type=simple  
 User=ark 
+ExecStartPre=/bin/sleep 3
+  
 ExecStart=/usr/bin/mpv --no-video \"$selected_music\"
 Restart=on-failure
 
